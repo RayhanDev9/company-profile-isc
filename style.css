@@ -520,6 +520,11 @@ col-2-about .inner-icon-about {
     font-size: var(--font-4xl);
   }
 
+  
+  .col-1-hero p {
+    font-size: var(--font-lg);
+  }
+
   .col-1-hero h2 {
     font-size: var(--font-xl);
   }
