@@ -65,7 +65,7 @@ body {
 }
 
 section {
-  padding-block: 9rem;
+  padding-block: 4rem;
 }
 .container {
   width: 100%;
@@ -167,28 +167,27 @@ header .col-2-header .humberger-line {
   background-color: var(--bg-secondary);
   box-shadow: var(--shadow-lg);
   top: 100%; /* Pas di bawah header */
-  right: 0;   /* Tempelkan ke kanan layar agar tidak meluber */
+  right: 0; /* Tempelkan ke kanan layar agar tidak meluber */
   max-width: 96rem;
   padding: 1.5rem;
   padding-inline: 3rem;
   z-index: 99;
   transition: all 0.5s ease;
-  
+
   /* Perubahan Utama */
   opacity: 0;
-  visibility: hidden; 
-  transform: translateX(100%); /* Dorong keluar layar sepenuhnya berdasarkan lebar dirinya sendiri */
+  visibility: hidden;
+  transform: translateX(-100%);
 }
 
 #menu-toggle:checked ~ #nav-menu {
   transform: translateX(0);
-   visibility:visible; 
+  visibility: visible;
   opacity: 1;
 }
 
 #nav-menu .nav-ul {
   list-style: none;
-
 }
 
 #nav-menu .nav-item {
@@ -466,6 +465,9 @@ col-2-about .inner-icon-about {
 
 /* lg ≥ 1024px */
 @media (min-width: 1024px) {
+  section {
+    padding-block: 5rem;
+  }
   .container {
     max-width: 64;
   }
@@ -487,6 +489,7 @@ col-2-about .inner-icon-about {
     opacity: 1;
 
     transform: translateX(0);
+    visibility: visible;
   }
 
   #nav-menu .nav-ul {
@@ -502,9 +505,6 @@ col-2-about .inner-icon-about {
 
   /* Header end */
   /* Hero Section */
-
-  header {
-  }
 
   .inner-hero {
     grid-template-columns: 50% 50%; /* 2 kolom sama lebar */
@@ -581,6 +581,9 @@ col-2-about .inner-icon-about {
 
 /* 2xl ≥ 1536px */
 @media (min-width: 1536px) {
+  section {
+    padding-block: 6rem;
+  }
   .container {
     max-width: 96rem;
   }
