@@ -5,13 +5,6 @@
   --text-white: #ffffff;
   --text-primary: #095bbd;
 
-  /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-
   /* Font Sizes */
   --font-sm: 0.875rem;
   --font-base: 1rem;
@@ -92,7 +85,7 @@ header .inner-header {
   grid-template-areas: "col-1-header col-2-header";
 }
 
-/*------- Colom 1  ------ */
+/*------- Colom 1 header ------ */
 header .col-1-header {
   grid-area: col-1-header;
   height: 56px;
@@ -103,12 +96,12 @@ header .col-1-header {
 
 header .col-1-header .logo {
   display: flex;
-  align-items: center; /* bikin span sejajar tengah dengan gambar */
-  gap: 8px; /* jarak antara gambar dan teks */
+  align-items: center;
+  gap: 8px;
 }
 header .col-1-header .logo img {
   height: 36px;
-  width: auto; /* biar proporsi aman */
+  width: auto; 
 }
 
 header .col-1-header .logo span {
@@ -117,7 +110,7 @@ header .col-1-header .logo span {
   font-size: var(--font-xl);
 }
 
-/*------- Colom 2  ------ */
+/*------- Colom 2 header  ------ */
 header .col-2-header {
   grid-area: col-2-header;
   height: 56px;
@@ -142,10 +135,10 @@ header .col-2-header .humberger-line {
   width: 20px;
   height: 3px;
   display: block;
-  background: rgba(0, 0, 0, 0.9); /* ini yang bikin garis */
-  border-radius: 2px; /* opsional biar agak halus */
+  background: rgba(0, 0, 0, 0.9); 
+  border-radius: 2px; 
   transition: all 0.3s ease;
-  transform-origin: center; /* penting */
+  transform-origin: center; 
 }
 
 /* saat aktif */
@@ -163,11 +156,11 @@ header .col-2-header .humberger-line {
 /* ------ Menu ------ */
 #nav-menu {
   position: absolute;
-  /* overflow-x: hidden; <-- Hapus ini jika tidak perlu di dalam menu */
+  
   background-color: var(--bg-secondary);
   box-shadow: var(--shadow-lg);
-  top: 100%; /* Pas di bawah header */
-  right: 0; /* Tempelkan ke kanan layar agar tidak meluber */
+  top: 100%; 
+  right: 0; 
   max-width: 96rem;
   padding: 1.5rem;
   padding-inline: 3rem;
@@ -179,6 +172,7 @@ header .col-2-header .humberger-line {
   visibility: hidden;
   transform: translateX(-100%);
 }
+
 
 #menu-toggle:checked ~ #nav-menu {
   transform: translateX(0);
@@ -212,22 +206,21 @@ header .col-2-header .humberger-line {
 
 .inner-hero {
   display: grid;
-  grid-template-columns: 100%; /* 2 kolom sama lebar */
-  gap: 16px; /* jarak antar kolom */
+  grid-template-columns: 100%; 
+  gap: 16px; 
 
   grid-template-areas:
     "text"
     "logo";
-  /* justify-content: center;  */
   place-items: center;
 }
-/* ---- Colom 1 ----- */
+/* ---- Colom 1 Hero Section----- */
 .col-1-hero {
   width: inherit;
   display: flex;
   grid-area: text;
   padding-inline: 1em;
-  justify-content: center; /* tengah horizontal */
+  justify-content: center; 
   flex-direction: column;
   align-items: flex-start;
 }
@@ -240,7 +233,6 @@ header .col-2-header .humberger-line {
   font-weight: 700;
 }
 .col-1-hero h1 span {
-  /* font-size: var(--font-heading-mobile); */
   font-size: var(--font-2xl);
   line-height: var(--line-height-tight);
   color: var(--text-primary);
@@ -290,7 +282,7 @@ header .col-2-header .humberger-line {
   z-index: 999;
 }
 
-/* ---- Colom 2 ----- */
+/* ---- Colom 2 Hero section----- */
 
 .col-2-hero {
   grid-area: logo;
@@ -316,7 +308,6 @@ header .col-2-header .humberger-line {
   font-weight: 700;
   opacity: 0.8;
   font-size: var(--font-lg);
-  /* margin-bottom: 0.7rem; */
   line-height: var(--line-height-snug);
   text-transform: none;
   margin-inline-start: 0.8em;
@@ -324,22 +315,23 @@ header .col-2-header .humberger-line {
 
 .inner-about {
   display: grid;
-  grid-template-columns: 100%; /* 2 kolom sama lebar */
-  gap: 16px; /* jarak antar kolom */
+  grid-template-columns: 100%;
+  gap: 16px; 
 
   grid-template-areas:
     "col-1-about"
     "col-2-about";
   justify-content: center;
   align-items: start;
-  /* place-items: center; */
 }
+
+/* ---- colom 1 about  */
 .col-1-about {
   width: inherit;
   display: flex;
   grid-area: col-1-about;
   padding-inline: 1em;
-  justify-content: center; /* tengah horizontal */
+  justify-content: center; 
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
@@ -368,12 +360,13 @@ header .col-2-header .humberger-line {
   font-weight: 600;
 }
 
+/* ---- colom 2 about  */
 .col-2-about {
   width: inherit;
   display: flex;
   grid-area: col-2-about;
   padding-inline: 1em;
-  justify-content: center; /* tengah horizontal */
+  justify-content: center; 
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
@@ -393,7 +386,6 @@ header .col-2-header .humberger-line {
 .col-2-about p {
   line-height: var(--line-height-tight);
   font-size: var(--font-base);
-  /* margin-bottom: 1.5rem; */
 }
 
 .col-2-about ul {
@@ -507,16 +499,15 @@ col-2-about .inner-icon-about {
   /* Hero Section */
 
   .inner-hero {
-    grid-template-columns: 50% 50%; /* 2 kolom sama lebar */
+    grid-template-columns: 50% 50%; 
     grid-template-areas: "text logo";
   }
 
-  /* ---- Colom 1 ----- */
+  /* ---- Colom 1 hero section LG ----- */
   .col-1-hero h1 {
     font-size: var(--font-xl);
   }
   .col-1-hero h1 span {
-    /* font-size: var(--font-heading-mobile); */
     font-size: var(--font-4xl);
   }
 
@@ -545,9 +536,8 @@ col-2-about .inner-icon-about {
     grid-template-areas: "col-1-about col-2-about";
   }
 
-  /* ---- Colom 1 ----- */
+  /* ---- Colom 1 about LG----- */
   .col-1-about h1 {
-    /* font-size: var(--font-heading-mobile); */
     font-size: var(--font-4xl);
   }
 
@@ -563,12 +553,11 @@ col-2-about .inner-icon-about {
     margin-top: 2rem;
   }
 
-  /* ---- Colom 2 ----- */
+  /* ---- Colom 2 about LG----- */
   .col-2-about {
     margin-top: 0rem;
   }
   .col-2-about h1 {
-    /* font-size: var(--font-heading-mobile); */
     font-size: var(--font-4xl);
   }
 
