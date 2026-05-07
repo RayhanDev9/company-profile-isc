@@ -365,7 +365,7 @@ section {
 
 /* End Service Cards */
 
-/* Footer Complex Styles */
+/* Footer Styles */
 .footer {
     background-color: var(--dark);
     color: #cbd5e1;
@@ -483,7 +483,7 @@ section {
         padding: 3rem 5% 2rem 5%;
     }
 }
-/* End Footer Complex Styles */
+/* End Footer Styles */
 
 /* About Hero */
 .about-hero {
@@ -529,7 +529,7 @@ section {
 .about-content {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center; /* Membuat teks cerita berada di tengah */
+    text-align: center;
     color: var(--secondary);
     line-height: 1.8;
 }
@@ -548,6 +548,4 @@ section {
     .hero p {
         font-size: 1rem;
     }
-
-    /* Mobile menu simplified for demo */
 }
