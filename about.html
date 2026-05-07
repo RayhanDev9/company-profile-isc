@@ -4,98 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISC | Home</title>
-    <link rel="icon" type="image/x-icon" href="/img/logo_isc.png">
+    <title>ISC | About Us</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/img/logo_isc.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
     <div class="scroll-progress"></div>
 
     <nav>
         <div class="logo"><img src="img/logo_isc.png" alt="isc_logo">ISC</div>
 
-        <!-- Input harus di atas nav-links -->
         <input type="checkbox" id="check">
 
-        <!-- Label sebagai tombol klik -->
         <label for="check" class="menu-toggle">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </label>
 
-        <!-- Elemen yang akan digerakkan -->
         <ul class="nav-links">
-            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="hero" class="hero">
-        <h1>I SEE YOUR SKILL</h1>
-        <p>Bergabunglah dengan kami di Informatic Study Club untuk mengembangkan bakat Anda</p>
-        <a href="index.html#services" class="btn btn-primary">Lihat Layanan</a>
+    <section class="about-hero">
+        <h2>Tentang Kami</h2>
+        <p>Informatics Study Club (ISC) Universitas Pamulang adalah komunitas dinamis yang berdedikasi untuk
+            menjelajahi, mengembangkan, dan memajukan teknologi informasi. Kami berkomitmen untuk menciptakan lingkungan
+            inovatif di mana para anggota dapat belajar, berkolaborasi, dan berbagi pengetahuan tentang dunia teknologi
+            yang terus berkembang.</p>
     </section>
 
-    <section id="services">
-        <div class="section-title">
-            <h2>Bidang Layanan</h2>
-            <p>Keahlian utama yang kami tawarkan untuk Anda.</p>
-        </div>
+    <section id="vision-mission" class="vision-mission">
         <div class="grid">
             <div class="card">
-                <h3>Web Development</h3>
-                <p>Pembelajaran pengembangan web modern dengan teknologi terkini, dimulai dari dasar hingga tingkat lanjut.</p>
+                <h3 class="card-title">Visi</h3>
+                <p>Mewujudkan mahasiswa Universitas Pamulang yang berkarakter kuat, siap bekerja, dan berwirausaha
+                    dengan berbasis teknologi.</p>
             </div>
             <div class="card">
-                <h3>UI/UX Design</h3>
-                <p>Pembelajaran desain antarmuka pengguna yang intuitif dan berfokus pada pengalaman manusia.</p>
-            </div>
-            <div class="card">
-                <h3>Machine Learning</h3>
-                <p>Pembelajaran machine learning untuk memecahkan masalah bisnis yang kompleks.</p>
+                <h3 class="card-title">Misi</h3>
+                <ul class="mission-list">
+                    <li>Menyediakan sarana dan pra sarana yang interaktif dan komunikatif bagi mahasiswa.</li>
+                    <li>Meningkatkan hubungan yang sinergik dan positif baik di dalam maupun luar club.</li>
+                    <li>Menjadikan ISC sebagai wadah pengembangan bagi mahasiswa untuk bisa saling berkomunikasi dan
+                        berkolaborasi.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="contact" style="background: var(--light);">
+    <section id="about-detail" class="about-detail">
         <div class="section-title">
-            <h2>Hubungi Kami</h2>
-            <p>Ada pertanyaan? Kirimkan pesan langsung ke email kami.</p>
+            <h2>Cerita Kami</h2>
         </div>
-
-        <div class="contact-container">
-            <form action="https://formspree.io/f/[EMAIL_ANDA]" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nama Lengkap</label>
-                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Alamat Email</label>
-                    <input type="email" id="email" name="_replyto" placeholder="nama@email.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subjek</label>
-                    <input type="text" id="subject" name="subject" placeholder="Tujuan pesan">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Pesan</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesan Anda di sini..."
-                        required></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
-            </form>
+        <div class="about-content">
+            <p>Berawal dari semangat untuk memecahkan masalah kompleks melalui teknologi, kami tumbuh menjadi tim yang
+                ahli dalam pengembangan sistem berbasis web. Fokus kami bukan hanya membangun kode, tapi membangun
+                solusi yang berdampak pada pertumbuhan bisnis Anda.</p>
         </div>
     </section>
 
