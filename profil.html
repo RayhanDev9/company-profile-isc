@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISC | Home</title>
+    <title>ISC | Profile $name</title>
     <link rel="icon" type="image/x-icon" href="/img/logo_isc.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -13,8 +13,6 @@
 </head>
 
 <body>
-
-    <div class="scroll-progress"></div>
 
     <nav>
         <div class="logo"><img src="img/logo_isc.png" alt="isc_logo">ISC</div>
@@ -35,66 +33,70 @@
         </ul>
     </nav>
 
-    <section id="hero" class="hero">
-        <h1>I SEE YOUR SKILL</h1>
-        <p>Bergabunglah dengan kami di Informatic Study Club untuk mengembangkan bakat Anda</p>
-        <a href="index.html#services" class="btn btn-primary">Lihat Layanan</a>
-    </section>
+    <main class="profile-layout">
+        <div class="container grid-container">
 
-    <section id="services">
-        <div class="section-title">
-            <h2>Bidang Layanan</h2>
-            <p>Keahlian utama yang kami tawarkan untuk Anda.</p>
-        </div>
-        <div class="grid">
-            <div class="card">
-                <h3>Web Development</h3>
-                <p>Pembelajaran pengembangan web modern dengan teknologi terkini, dimulai dari dasar hingga tingkat lanjut.</p>
-            </div>
-            <div class="card">
-                <h3>UI/UX Design</h3>
-                <p>Pembelajaran desain antarmuka pengguna yang intuitif dan berfokus pada pengalaman manusia.</p>
-            </div>
-            <div class="card">
-                <h3>Machine Learning</h3>
-                <p>Pembelajaran machine learning untuk memecahkan masalah bisnis yang kompleks.</p>
-            </div>
-        </div>
-    </section>
+            <aside class="sidebar-card-skeleton">
+                <div class="skeleton-avatar-wrapper">
+                    <div class="skeleton sk-avatar"></div>
+                    <div class="skeleton sk-status-badge"></div>
+                </div>
+                <div class="skeleton sk-name"></div>
+                <div class="skeleton sk-role"></div>
+                <div class="skeleton sk-id"></div>
 
-    <section id="contact" style="background: var(--light);">
-        <div class="section-title">
-            <h2>Hubungi Kami</h2>
-            <p>Ada pertanyaan? Kirimkan pesan langsung ke email kami.</p>
-        </div>
+                <div class="skeleton sk-action-btn"></div>
+            </aside>
 
-        <div class="contact-container">
-            <form action="https://formspree.io/f/[EMAIL_ANDA]" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nama Lengkap</label>
-                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+            <section class="main-content-skeleton">
+
+                <div class="content-card-skeleton">
+                    <div class="skeleton sk-section-title"></div>
+                    <div class="skeleton sk-paragraph-line"></div>
+                    <div class="skeleton sk-paragraph-line"></div>
+                    <div class="skeleton sk-paragraph-line short"></div>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Alamat Email</label>
-                    <input type="email" id="email" name="_replyto" placeholder="nama@email.com" required>
+                <div class="content-card-skeleton">
+                    <div class="skeleton sk-section-title short"></div>
+                    <div class="contact-grid-skeleton">
+                        <div class="contact-item-skeleton">
+                            <div class="skeleton sk-label"></div>
+                            <div class="skeleton sk-value"></div>
+                        </div>
+                        <div class="contact-item-skeleton">
+                            <div class="skeleton sk-label"></div>
+                            <div class="skeleton sk-value"></div>
+                        </div>
+                        <div class="contact-item-skeleton">
+                            <div class="skeleton sk-label"></div>
+                            <div class="skeleton sk-value"></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="subject">Subjek</label>
-                    <input type="text" id="subject" name="subject" placeholder="Tujuan pesan">
+                <div class="content-card-skeleton">
+                    <div class="skeleton sk-section-title"></div>
+                    <div class="timeline-item-skeleton">
+                        <div class="skeleton sk-timeline-year"></div>
+                        <div class="timeline-body-skeleton">
+                            <div class="skeleton sk-timeline-title"></div>
+                            <div class="skeleton sk-paragraph-line"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-item-skeleton">
+                        <div class="skeleton sk-timeline-year"></div>
+                        <div class="timeline-body-skeleton">
+                            <div class="skeleton sk-timeline-title"></div>
+                            <div class="skeleton sk-paragraph-line short"></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="message">Pesan</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesan Anda di sini..."
-                        required></textarea>
-                </div>
+            </section>
 
-                <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
-            </form>
         </div>
-    </section>
+    </main>
 
     <footer class="footer">
         <div class="footer-container">

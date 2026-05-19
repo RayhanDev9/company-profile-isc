@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISC | About Us</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/img/logo_isc.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -36,10 +36,11 @@
 
     <section class="about-hero">
         <h2>Tentang Kami</h2>
-        <p>Informatics Study Club (ISC) Universitas Pamulang adalah komunitas dinamis yang berdedikasi untuk
-            menjelajahi, mengembangkan, dan memajukan teknologi informasi. Kami berkomitmen untuk menciptakan lingkungan
-            inovatif di mana para anggota dapat belajar, berkolaborasi, dan berbagi pengetahuan tentang dunia teknologi
-            yang terus berkembang.</p>
+        <div class="container">
+            <p>ISC berkomitmen menjadi ruang berkembang bagi mahasiswa untuk Upskilling yang relevan. Di sini, kami
+                mengeksplorasi potensi masa depan melalui tiga pilar utama: Web Development, Machine Learning, dan UI/UX
+                Design.</p>
+        </div>
     </section>
 
     <section id="vision-mission" class="vision-mission">
@@ -66,9 +67,24 @@
             <h2>Cerita Kami</h2>
         </div>
         <div class="about-content">
-            <p>Berawal dari semangat untuk memecahkan masalah kompleks melalui teknologi, kami tumbuh menjadi tim yang
-                ahli dalam pengembangan sistem berbasis web. Fokus kami bukan hanya membangun kode, tapi membangun
-                solusi yang berdampak pada pertumbuhan bisnis Anda.</p>
+            <p>Resmi berdiri pada 25 April 2024, Informatics Student Club (ISC) lahir sebagai komunitas progresif yang
+                menjadi wadah kolaborasi dan inovasi bagi mahasiswa Teknik Informatika Universitas Pamulang. Kami hadir
+                bukan sekadar sebagai tempat berkumpul, melainkan sebagai inkubator talenta digital yang fokus pada
+                penyaluran minat dan pengembangan keterampilan riil di industri teknologi.</p>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Tim Kami</span>
+                <h2>Anggota Pengurus Organisasi</h2>
+                <p>Kenali para profesional berbakat yang berada di balik layar dan siap membantu menyukseskan proyek
+                    Anda.</p>
+            </div>
+
+            <div class="team-grid" id="team-container"></div>
+
         </div>
     </section>
 
@@ -83,8 +99,6 @@
                     menjelajahi, mengembangkan, dan memajukan teknologi informasi.
                 </p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
                     <a href="https://www.instagram.com/isc.unpam"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
@@ -109,7 +123,7 @@
 
             <div class="footer-col">
                 <h4>Newsletter</h4>
-                <p>Dapatkan update terbaru mengenai teknologi dan proyek kami.</p>
+                <p>Dapatkan update terbaru mengenai organisasi dan event kami.</p>
                 <form class="footer-form">
                     <input type="email" placeholder="Email Anda" required>
                     <button type="submit">Langganan</button>
@@ -122,6 +136,179 @@
         </div>
     </footer>
 
+    <div class="modal-overlay" id="message-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Kirim Pesan ke <span id="modal-recipient-name">Nama Anggota</span></h3>
+                <button class="btn-close-modal" id="close-modal-btn">&times;</button>
+            </div>
+
+            <form id="message-form">
+                <div class="form-group">
+                    <label for="sender-email">Email Anda</label>
+                    <input type="email" id="sender-email" placeholder="nama@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message-text">Pesan</label>
+                    <textarea id="message-text" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancel-modal-btn">Batal</button>
+                    <button type="submit" class="btn-submit">Kirim Pesan</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
+
+<script text="javascript">
+    const membersData = [
+        {
+            name: "Rajin Nahampun",
+            role: "Pembina",
+            bio: "Rajin Nahampun S.Kom., M.Kom. adalah pembina yang berdedikasi di ISC, dengan pengalaman luas dalam pengembangan perangkat lunak dan manajemen proyek IT.",
+            avatar: "./img/kosong.webp",
+            isOnline: true,
+            profileLink: "./profil.html"
+        },
+        {
+            name: "Raditia Vindua",
+            role: "Penasihat",
+            bio: "Raditia Vindua S.Si., M.Kom. adalah penasihat yang berpengalaman di ISC, dengan latar belakang kuat dalam keamanan siber dan pengembangan aplikasi web.",
+            avatar: "./img/kosong.webp",
+            isOnline: true,
+            profileLink: "./profil.html"
+        },
+        {
+            name: "Mohamad Tohari",
+            role: "Ketua Organisasi",
+            bio: "Mohamad Tohari adalah ketua organisasi ISC yang visioner, dengan keahlian dalam manajemen tim dan pengembangan produk digital.",
+            avatar: "./img/tohari.png",
+            isOnline: false,
+            profileLink: "./profil.html"
+        },
+        {
+            name: "Alilifiah Firnando",
+            role: "Wakil Ketua + Koordinator Machine Learning",
+            bio: "Alilifiah Firnando adalah wakil ketua dan koordinator machine learning ISC yang inovatif, dengan pengalaman dalam pengembangan model pembelajaran mesin dan analisis data.",
+            avatar: "./img/alif.png",
+            isOnline: true,
+            profileLink: "./profil.html"
+        },
+        {
+            name: "Aisyah Rahmawati",
+            role: "Sekretaris + Koordinator Web Development",
+            bio: "Aisyah Rahmawati adalah sekretaris dan koordinator web development ISC yang terampil, dengan latar belakang kuat dalam pengembangan front-end dan manajemen administrasi organisasi.",
+            avatar: "./img/Syah.jpeg",
+            isOnline: true,
+            profileLink: "./profil.html"
+        },
+        {
+            name: "Nirmawati",
+            role: "Bendahara",
+            bio: "Nirmawati adalah bendahara ISC yang jujur dan teliti, dengan pengalaman dalam manajemen keuangan organisasi.",
+            avatar: "./img/irma.png",
+            isOnline: true,
+            profileLink: "./profil.html"
+        },
+        {
+            name: "Said Muhammad Rifky",
+            role: "Koordinator UI/UX Design",
+            bio: "Said Muhammad Rifky adalah koordinator UI/UX Design ISC yang kreatif, dengan pengalaman dalam desain antarmuka pengguna dan pengalaman pengguna.",
+            avatar: "./img/rifky.png",
+            isOnline: true,
+            profileLink: "./profil.html"
+        },
+        {
+            name: "Ibrahim Daud Syahdan",
+            role: "Koordinator English Up Skill",
+            bio: "Ibrahim Daud Syahdan adalah koordinator English Up Skill ISC yang berpengalaman, dengan fokus pada pengembangan kemampuan bahasa Inggris anggota organisasi.",
+            avatar: "./img/daud.png",
+            isOnline: true,
+            profileLink: "./profil.html"
+        },
+    ];
+
+    const teamContainer = document.getElementById('team-container');
+
+    const messageModal = document.getElementById('message-modal');
+    const modalRecipientName = document.getElementById('modal-recipient-name');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const cancelModalBtn = document.getElementById('cancel-modal-btn');
+    const messageForm = document.getElementById('message-form');
+
+    function renderTeam() {
+        teamContainer.innerHTML = "";
+
+        membersData.forEach(member => {
+            const statusClass = member.isOnline ? 'online' : 'offline';
+
+            const cardHTML = `
+            <div class="member-card">
+                <div class="card-body">
+                    <div class="avatar-container">
+                        <img src="${member.avatar}" alt="${member.name}" class="avatar">
+                        <span class="status-dot ${statusClass}"></span>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">${member.name}</h3>
+                        <p class="member-role">${member.role}</p>
+                    </div>
+                    <p class="member-bio">${member.bio}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="${member.profileLink}" class="btn-profile">Lihat Profil</a>
+                    <!-- Tambahkan data-name di tombol ini agar kita tahu siapa yang diklik -->
+                    <button class="btn-icon open-modal-btn" data-name="${member.name}" title="Kirim Pesan ke ${member.name}">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        `;
+            teamContainer.insertAdjacentHTML('beforeend', cardHTML);
+        });
+    }
+
+    function openModal(name) {
+        modalRecipientName.textContent = name;
+        messageModal.classList.add('active');
+    }
+
+    function closeModal() {
+        messageModal.classList.remove('active');
+        messageForm.reset();
+    }
+
+    teamContainer.addEventListener('click', (e) => {
+        const button = e.target.closest('.open-modal-btn');
+        if (button) {
+            const memberName = button.getAttribute('data-name');
+            openModal(memberName);
+        }
+    });
+
+    closeModalBtn.addEventListener('click', closeModal);
+    cancelModalBtn.addEventListener('click', closeModal);
+
+    messageModal.addEventListener('click', (e) => {
+        if (e.target === messageModal) {
+            closeModal();
+        }
+    });
+
+    messageForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('sender-email').value;
+        const message = document.getElementById('message-text').value;
+        const recipient = modalRecipientName.textContent;
+
+        alert(`Pesan untuk ${recipient} berhasil dikirim dari ${email}!`);
+
+        closeModal();
+    });
+
+    document.addEventListener('DOMContentLoaded', renderTeam);
+</script>
 
 </html>
